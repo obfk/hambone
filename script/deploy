@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cf push hambone -b https://github.com/cloudfoundry/ruby-buildpack.git
