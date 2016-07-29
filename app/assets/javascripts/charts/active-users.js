@@ -1,9 +1,10 @@
 var chart = c3.generate({
-  bindto: '#chart',
+  bindto: '#chart-active-users',
   data: {
     columns: [
-      ['data30', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      ['data60', 2, 4, 8, 6, 3, 2, 9, 12, 7, 11, 11, 10]
+      ['Active30', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      ['Active60', 2, 4, 8, 6, 3, 2, 9, 12, 7, 11, 11, 10],
+      ['Active90', 5, 1, 9, 12, 4, 2, 5, 3, 20, 1, 2, 11],
     ],
     type: 'bar'
   },
@@ -12,7 +13,7 @@ var chart = c3.generate({
   },
   bar: {
     width: {
-      ratio: 1
+      ratio: 1.01
     }
   },
   axis: {
@@ -26,6 +27,9 @@ var chart = c3.generate({
       label: {
         text: 'Month',
         position: 'outer-center'
+      },
+      tick: {
+        values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
       }
     }
   }
