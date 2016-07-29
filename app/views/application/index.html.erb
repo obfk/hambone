@@ -1,6 +1,6 @@
 <div class="section-container">
   <div class="container">
-    <h2>User Activity</h2>
+    <h2>User Activity Trends</h2>
   </div>
 </div>
 
@@ -9,3 +9,9 @@
     <div id="chart-active-users"></div>
   </div>
 </div>
+
+<script>
+  var active_30 = <%= @active_30 %>;
+  var active_60 = <%= @active_60 %>;
+  var active_90 = <%= @active_90 %>;
+</script>

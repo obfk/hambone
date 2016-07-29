@@ -1,23 +1,25 @@
+active_30.unshift('Active30');
+active_60.unshift('Active60');
+active_90.unshift('Active90');
+
 var chart = c3.generate({
   bindto: '#chart-active-users',
   data: {
-    x: 'x',
     columns: [
-      ['x', '2016-01-01', '2016-02-01', '2016-03-01', '2016-04-01', '2016-05-01', '2016-06-01', '2016-07-01', '2016-08-01', '2016-09-01', '2016-10-01', '2016-11-01', '2016-12-01'],
-      ['Active30', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      ['Active60', 2, 4, 8, 6, 3, 2, 9, 12, 7, 11, 11, 10],
-      ['Active90', 5, 1, 9, 12, 4, 2, 5, 3, 20, 1, 2, 11]
-    ],
-  },
-  legend: {
-    position: 'right'
+      active_90,
+      active_60,
+      active_30
+    ]
   },
   axis: {
     x: {
-      type: 'timeseries',
-      tick: {
-        format: '%Y-%m-%d'
-      }
+      label: 'Time'
+    },
+    y: {
+      label: '# of Users'
     }
+  },
+  legend: {
+    position: 'right'
   }
 });

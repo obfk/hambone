@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'csv'
+
+# Stats
+CSV.foreach('/Users/pivotal/Desktop/hambone/db/data/stats.csv') do |row|
+  Stat.create(
+    date:                      row[0],
+    logins_within_thirty_days: row[1],
+    logins_within_sixty_days:  row[2],
+    logins_within_ninety_days: row[3]
+  )
+end
