@@ -24,3 +24,6 @@ config/secrets.yml
 /.bundle
 /vendor/bundle
 
+## IDE
+.idea/
+
