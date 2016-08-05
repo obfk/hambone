@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
   http_basic_authenticate_with name: "foobar", password: "pivotaltracker-hambone-2016"
+  
+  protect_from_forgery with: :exception
 
   def index
     @active_30 = Stat.active_30
