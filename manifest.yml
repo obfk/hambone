@@ -3,4 +3,4 @@ applications:
 - name: hambone
   services:
     - rails-postgres
-  command: bundle exec rake db:drop && rake db:create && rake db:migrate && rake db:seed && bundle exec rails s -p $PORT -e $RAILS_ENV
+  command: bundle exec rake db:migrate && rake db:seed && bundle exec rails s -p $PORT -e $RAILS_ENV
