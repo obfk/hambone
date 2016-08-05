@@ -1,7 +1,7 @@
 require 'csv'
 
 # Stats
-CSV.foreach('/Users/pivotal/Desktop/hambone/db/data/stats.csv') do |row|
+CSV.foreach('db/data/stats.csv') do |row|
   Stat.create(
     date:                      row[0],
     logins_within_thirty_days: row[1],
