@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @stories_created_today   = Stat.stories_created_today
     @total_number_of_stories = Stat.total_number_of_stories
 
     @active_date = Stat.active_date
