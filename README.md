@@ -19,5 +19,5 @@ cf create-service elephantsql turtle rails-postgres
 ## Deploy
 
 ```
-./script/deploy
+script/deploy
 ```
