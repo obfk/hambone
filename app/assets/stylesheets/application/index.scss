@@ -1,3 +1,25 @@
+.story-stats {
+  display: flex;
+  justify-content: center;
+
+  .story-stats__stat {
+    background-color: #fdfdfd;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 16px;
+    min-height: 160px;
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 1.20rem;
+  }
+}
+
 .section-container {
   margin: 2rem 0;
 }

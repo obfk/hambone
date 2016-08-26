@@ -2,6 +2,10 @@ class Stat < ApplicationRecord
 
   SUBSET_SIZE = 10
 
+  def self.total_number_of_stories
+    Stat.last.total_number_of_stories
+  end
+
   def self.active_date
     subset(Stat.all.pluck(:date).map(&:to_s), SUBSET_SIZE)
   end
@@ -21,6 +25,6 @@ class Stat < ApplicationRecord
   private
 
   def self.subset(section, n)
-    section.each_slice(n).map(&:last)
+    section.each_slice(n).map(&:last).compact
   end
 end

@@ -4,6 +4,7 @@ ruby '2.3.1'
 
 gem 'rails', '~> 5.0.0'
 gem 'pg'
+gem 'httparty'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
