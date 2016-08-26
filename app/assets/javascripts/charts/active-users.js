@@ -13,7 +13,12 @@ var chart = c3.generate({
       active_30,
       active_60,
       active_90
-    ]
+    ],
+    colors: {
+      'last 30 days': '#672935',
+      'last 60 days': '#E75A2C',
+      'last 90 days': '#009A72'
+    }
   },
   axis: {
     x: {

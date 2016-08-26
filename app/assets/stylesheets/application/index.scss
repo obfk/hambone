@@ -1,3 +1,7 @@
+.section-header {
+  text-align: center;
+}
+
 .story-stats {
   display: flex;
   justify-content: center;
@@ -13,6 +17,11 @@
     padding: 16px;
     text-align: center;
     width: 260px;
+    transition: box-shadow 50ms;
+  }
+
+  .story-stats__stat:hover {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08);
   }
 
   h3 {
@@ -34,5 +43,9 @@
 }
 
 .c3-axis-x tspan {
+  font-size: 14px;
+}
+
+.c3-legend-item {
   font-size: 14px;
 }
