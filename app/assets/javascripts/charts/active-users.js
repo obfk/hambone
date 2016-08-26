@@ -1,25 +1,30 @@
-active_30.unshift('Active30');
-active_60.unshift('Active60');
-active_90.unshift('Active90');
+active_date.unshift('x');
+
+active_30.unshift('last 30 days');
+active_60.unshift('last 60 days');
+active_90.unshift('last 90 days');
 
 var chart = c3.generate({
   bindto: '#chart-active-users',
   data: {
+    x: 'x',
     columns: [
-      active_90,
+      active_date,
+      active_30,
       active_60,
-      active_30
+      active_90
     ]
   },
   axis: {
     x: {
-      label: 'Time'
+      type: 'timeseries',
+      tick: {
+        format: '%m/%Y',
+        count: 8
+      }
     },
     y: {
-      label: '# of Users'
+      label: '# of users'
     }
-  },
-  legend: {
-    position: 'right'
   }
 });

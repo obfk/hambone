@@ -1,6 +1,6 @@
 <div class="section-container">
   <div class="container">
-    <h2>User Activity Trends</h2>
+    <h2>Login Activity</h2>
   </div>
 </div>
 
@@ -11,7 +11,10 @@
 </div>
 
 <script>
-  var active_30 = <%= @active_30 %>;
-  var active_60 = <%= @active_60 %>;
-  var active_90 = <%= @active_90 %>;
+  // TODO: use a god damned ActionCable. this is terrible.
+  var active_date = <%= raw(@active_date) %>;
+
+  var active_30 = <%= raw(@active_30) %>;
+  var active_60 = <%= raw(@active_60) %>;
+  var active_90 = <%= raw(@active_90) %>;
 </script>
