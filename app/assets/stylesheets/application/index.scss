@@ -10,12 +10,17 @@
     flex-direction: column;
     justify-content: center;
     margin: 16px;
-    min-height: 160px;
-    padding: 32px 16px;
+    padding: 16px;
     text-align: center;
+    width: 260px;
+  }
+
+  h3 {
+    margin: 0;
   }
 
   h4 {
+    color: #5d5d5d;
     font-size: 1.20rem;
   }
 }
